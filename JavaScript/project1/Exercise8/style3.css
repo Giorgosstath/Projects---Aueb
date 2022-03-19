@@ -1,0 +1,66 @@
+body{
+	background-color: #ffebcd;
+}
+
+
+input:invalid {
+  border: 2px solid red;
+}
+
+
+input,textarea{
+	border-radius: 10px;
+}
+
+			
+#submit{
+	font-size:1.2em;
+	text-decoration: underline;
+}
+			
+header{
+	text-align:center;
+	font-size:2em;
+}
+		
+form{
+	width:90%;
+	margin-left:5%;
+}
+			
+legend{
+	text-align:center;
+	font-size:1.5em;
+}
+			
+input,textarea,select,details{
+	margin-top:2em;
+}
+			
+label{
+	margin-left:1em;
+}
+
+			
+fieldset{
+	margin-top:3em;
+}
+		
+hr{
+	margin:2em 0em;
+}
+			
+#fieldset1{
+	background-color:yellow;
+}
+			
+#fieldset2{
+	background-color:#1FF0DD;
+}
+			
+			
+footer{
+	margin:1em 0;
+	background-color:#CBA39D;
+	text-align:center;
+}

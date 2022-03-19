@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta charset="utf-8">
+		<meta name="George Stathopoulos" content="Resume">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> ΒΙΟΓΡΑΦΙΚΟ </title>
+	</head>
+	
+	<body>
+		<header> ΒΙΟΓΡΑΦΙΚΟ </header>
+		<nav class="navigation">
+			<a href="#section1"> ΠΡΟΣΩΠΙΚΑ ΣΤΟΙΧΕΙΑ </a>
+			<a href="#section2"> ΣΠΟΥΔΕΣ </a>
+			<a href="#section3"> ΞΕΝΕΣ ΓΛΩΣΣΕΣ </a>
+			<a href="#section4"> ΧΡΗΣΗ ΗΛΕΚΤΡΟΝΙΚΩΝ ΥΠΟΛΟΓΙΣΤΩΝ </a>
+			<a href="#section5"> ΠΡΟΫΠΗΡΕΣΙΑ/ΕΡΓΑΣΙΕΣ </a>
+			<a href="#footer"> ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ </a>
+		</nav>
+		<article>
+			<section id="section1">
+				<h1> ΠΡΟΣΩΠΙΚΑ ΣΤΟΙΧΕΙΑ </h1>
+				<img src="resume_pic.png" width="200" height="150" alt="resume-image" id="prof_pic">
+				<p> Ημερομηνία γέννησης: 18/06/1999<br>
+					Τόπος γέννησης: Αθήνα<br>
+					Τόπος κατοικίας: Αθήνα<br>
+					Οικογενειακή κατάσταση: Άγαμος</p>
+				<p> Περισσότερες πληροφορίες σχετικά με τα ενδιαφέροντα μου μπορείτε να βρείτε <a href="hobbies.html">εδώ</a>.</p>
+			</section>
+			
+			<section id="section2">
+				<h2> ΣΠΟΥΔΕΣ </h2>
+				<p> Ιούνιος 2014: Απολυτήριο Γυμνασίου με βαθμό Δεκαεννιά και δύο (19.2).<br>
+					Ιούνιος 2017: Απολυτήριο Λυκείου με βαθμό Δεκαοχτώ και έξι (18.6).</p>
+			</section>
+			
+			<section id="section3">
+				<h3> ΞΕΝΕΣ ΓΛΩΣΣΕΣ </h3>
+				<p lang="en" xml:lang="en"> 2015: English, Lower Peninsula of Michigan. <br>
+					2017: English, Examination for the Certificate of Proficiency in English (ECPE).</p>
+			</section>
+			
+			<section id="section4">
+				<h4> ΧΡΗΣΗ ΗΛΕΚΤΡΟΝΙΚΩΝ ΥΠΟΛΟΓΙΣΤΩΝ </h4>
+				<p lang="en" xml:lang="en"> 2010: European Computer Driving Licence (ECDL). </p>
+			</section>
+			
+			<section id="section5">
+				<h5> ΠΡΟΫΠΗΡΕΣΙΑ/ΕΡΓΑΣΙΕΣ </h5>
+				<p> 2018: Χρήση του εργαλείου Quartus για προγραμματισμό σε γλώσσα Vhdl.<br>
+					2019: Χρήση του εργαλείου Wireshark για προσωμοίωση της κίνησης μέσα σε ένα δίκτυο.<br>
+					2019: Βιβλιογραφική εργασία σχετικά με το black box testing.<br>
+					2020: Κατασκευή ενός μεταγλωττιστή για μία γλώσσα προγραμματισμού που αποτέλεσε υποσύνολο της γλώσσας python.</p>
+				<p> Για περισσότερες πληροφορίες σχετικά με τις εργασίες πατήστε <a href="projects.html">εδώ</a>. </p>
+			</section>
+			
+			<footer id="footer">
+				<h6> ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ</h6>
+				<p> Διεύθυνση κατοικίας: Ακαδημίας 58, Πανεπιστήμιο,Αθήνα.<br>
+				    Τηλέφωνο: 6992370909 <br>
+					Email: gstatho99@gmail.com </p>
+				<p> Περισσότερες πληροφορίες σχετικά με εμένα μπορείτε να βρείτε στο <a href="https://github.com/Giorgosstath">Github</a>.<br>
+					Για να επικοινωνήσετε μαζί μου συμπληρώστε την παρακάτω φόρμα.</p>
+				<form action="gstatho99@gmail.com" method="POST">
+					<fieldset>
+						<legend lang="en" xml:lang="en"> Contact info </legend>
+							<label for="txt_name"> Όνομα: </label>
+							<input type="text" id="txt_name" name="name" required>
+							
+							<label for="txt_surname"> Επώνυμο: </label>
+							<input type="text" id="txt_surname" name="surname" required>
+							
+							<label for="telep"> Τηλέφωνο: </label>
+							<input type="tel" id="telep" name="telephone" pattern="[0-9]{10}" title="Δώστε έναν έγκυρο αριθμό που αποτελείται απο 10 νούμερα.">
+							
+							<label for="age"> Ηλικία: </label>
+							<input type="number" id="age" name="age" min="12" max="120">
+							
+							<label for="email_form" lang="en" xml:lang="en"> Email: </label>
+							<input type="email" id="email_form" name="email" autocomplete="email" list="user_emails" required>
+							<datalist id="user_emails">
+								<option> username@gmail.com </option>
+								<option> username@yahoo.com </option>
+								<option> username@hotmail.gr </option>
+							</datalist>
+							<br>
+							<textarea id="textarea" name="text_area" rows="10" cols="100" placeholder="Write your text here." required></textarea>
+					</fieldset>
+					<input type="submit" id="form_submit" name="Submit">
+				</form>				
+			</footer>
+		</article>
+	</body>
+</html>

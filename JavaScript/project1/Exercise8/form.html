@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<meta charset="utf-8">
+		<meta name="George Stathopoulos" content="Form">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style3.css">
+		<title>REGISTRATION FORM</title>
+		<script src="javascript2.js"></script>
+	</head>
+	
+	<body>
+		<header>ΦΟΡΜΑ ΣΥΜΜΕΤΟΧΗΣ ΣΤΟΝ ΙΣΤΟΤΟΠΟ</header>
+		<details>
+			<summary>Συμπληρώστε την παρακάτω φόρμα προκειμένου να εγγραφτείτε στον ιστότοπό μας!</summary>
+			<p> Η εγγραφή του χρήστη γίνεται με συλλογή προσωπικών στοιχείων και στοιχείων χρήστη (username, password) και με συμπλήρωση ενός σύντομου
+				ερωτηματολογίου για να διαπιστωθούν τα ενδιαφέροντα του χρήστη, οι δεξιότητές του κτλ. Τα στοιχεία αυτά δεν θα διανεμηθούν σε τρίτους και
+				είναι καθαρά για ενημερωτικό σκοπό. </p>
+		</details>
+		<form>
+			<fieldset id="fieldset1">
+				<legend> Προσωπικά στοιχεία</legend>
+				<p> Τα στοιχεία σε κόκκινο πλαίσιο είναι υποχρεωτικά και πρέπει να συμπληρωθούν από τον χρήστη προκειμένου να αποσταλεί η φόρμα.</p>
+				<label for="name"> Ονοματεπώνυμο: </label>
+				<input type="text" id="name" name="user_name"  maxlength="80" autocomplete="on" required>
+				<br>
+				<label for="age"> Ηλικία: </label>
+				<input type="number" id="age" name="user_age" min="16" max="100" required> <span id="age_field"></span>
+				<br>
+				<label for="sex"> Φύλλο: </label>
+				<select id="sex">
+					<option>Άνδρας</option>
+					<option>Γυναίκα</option>
+					<option>Δεν επιθυμώ να δηλώσω</option>
+					<option>Άλλο</option>
+				</select>
+				<br>
+				<label for="email"> Email: </label>
+				<input type="email" id="email" name="user_email" placeholder="π.χ. user_name@gmail.com" autocomplete="email" list="user_emails" required>
+				<datalist id="user_emails">
+					<option>abc@gmail.com</option>
+					<option>abc@hotmail.com</option>
+					<option>abc@yahoo.com</option>
+				</datalist>
+				<br>
+				<label for="address"> Διεύθυνση: </label>
+				<input type="text" id="address" name="user_address" pattern="[Α-Ωα-ωA-Za-z]{3,} [0-9]{1,3}" placeholder="π.χ. Ακαδημίας 28" required>
+				<br>
+				<label for="birth_date"> Ημερομηνία Γέννησης: </label>
+				<input type="date" id="birth_date" name="user_birth_date">
+				<br>
+				<label for="country"> Χώρα κατοικίας: </label>
+				<input type="text" id="country" name="user_country" value="Ελλάδα" list="country_list" autocomplete="on" required>
+				<datalist id="country_list">
+					<option>Αγγλία<option>
+					<option>Κύπρος<option>
+					<option>Γαλλία<option>
+					<option>Ιταλία<option>
+				</datalist>
+				<br>
+				<label for="tel1"> Τηλέφωνο1: </label>
+				<input type="tel" id="tel1" name="user_tel1" class="telephone" autocomplete="on" required>
+				<label for="tel2"> Τηλέφωνο2: </label>
+				<input type="tel" id="tel2" name="user_tel2" class="telephone" autocomplete="on">
+				<label for="tel3"> Τηλέφωνο3: </label>
+				<input type="tel" id="tel3" name="user_tel3" class="telephone" autocomplete="on">
+				<br>
+				<label for="username"> Username: </label>
+				<input type="text" id="username" name="user_username" pattern="[Α-ΩA-Z]{1,}.*" placeholder="π.χ. Νέος_χρηστης1" required>
+				<span> Το username πρέπει να ξεκινάει με κεφαλαίο και μπορεί να περιέχει νούμερα ή/και κάτω παύλες </span>
+				<br>
+				<label for="pass"> Κωδικός: </label>
+				<input type="password" id="pass" name="user_pass"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}" required>
+				<span>Πρέπει να περιλαμβάνει τουλάχιστον 1 νούμερο,1 πεζό και 1 κεφαλαίο γράμμα και να έχει μήκος πάνω από 8 <b>ΑΓΓΛΙΚΟΥΣ</b> χαρακτήρες</span>
+				<br>
+				<label for="pass_val"> Επιβεβαίωση κωδικού: </label>
+				<input type="password" id="pass_val" name="user_pass_val"  required> <span id="pass_field"></span>
+				<br>
+				<label for="more_info"> Προσθέστε επιπλέον πληροφορίες ή σχόλια</label>
+				<textarea id="more_info" name="user_more_info" rows="4" cols="110"> Γράψτε εδώ... </textarea>
+			</fieldset>
+			<fieldset id="fieldset2">
+				<legend>Ερωτηματολόγιο</legend>
+				<p>1) Πώς μάθατε για την σελίδα μας? </p>
+				<input type="checkbox" id="q1a1" name="q1a1">
+				<label for="q1a1">Την βρήκα τυχαία στο διαδίκτυο</label><br>
+				<input type="checkbox" id="q1a2" name="q1a2">
+				<label for="q1a2">Μέσω φίλου</label><br>
+				<input type="checkbox" id="q1a3" name="q1a3">
+				<label for="q1a3">Από κάποια διαφήμιση</label>
+				<hr>
+				<p>2) Έχετε προηγούμενη εμπειρία πάνω στο software testing? </p>
+				<input type="radio" id="q2a1" name="radio_q">
+				<label for="q2a1">Όχι είναι η πρώτη φορά που ασχολούμαι</label><br>
+				<input type="radio" id="q2a2" name="radio_q">
+				<label for="q2a2">Έχω μερικές γνώσεις επάνω στο αντικείμενο</label><br>
+				<input type="radio" id="q2a3" name="radio_q">
+				<label for="q2a3">Είμαι αρκετά εξοικειωμένος</label>
+				<hr>
+				<p>3) Πόσο συχνά πραγματοποιείται εγγραφή σε κάποιον ιστότοπο?</p>
+				<input type="radio" id="q3a1" name="radio_q2">
+				<label for="q3a1">Είναι η πρώτη μου φορά</label><br>
+				<input type="radio" id="q3a2" name="radio_q2">
+				<label for="q3a2">Έχω εγγραφεί σε λίγες σελίδες</label><br>
+				<input type="radio" id="q3a3" name="radio_q2">
+				<label for="q3a3">Είμαι εγγεγραμμένος σε αρκετές σελίδες</label>
+				<hr>
+				<p>4) Γιατί αποφασίσατε να εγγραφείτε στον ιστότοπό μας?</p>
+				<input type="radio" id="q4a1" name="radio_q3">
+				<label for="q4a1">Με ενδιαφέρει/μου αρέσει</label><br>
+				<input type="radio" id="q4a2" name="radio_q3">
+				<label for="q4a2">Για επαγγελματική αποκατάσταση</label><br>
+				<input type="radio" id="q4a3" name="radio_q3">
+				<label for="q4a3">Κλάδος με μέλλον</label><br>
+				<input type="radio" id="q4a4" name="radio_q3">
+				<label for="q4a4">Άλλο</label><br>
+				<hr>
+				<p>5) Με τι ασχολειστε?</p>
+				<input type="radio" id="q5a1" name="radio_q4">
+				<label for="q5a1">Μαθητής</label><br>
+				<input type="radio" id="q5a2" name="radio_q4">
+				<label for="q5a2">Φοιτητής</label><br>
+				<input type="radio" id="q5a3" name="radio_q4">
+				<label for="q5a3">Εργαζόμενος</label><br>
+				<input type="radio" id="q5a4" name="radio_q4">
+				<label for="q5a4">Άνεργος</label><br>
+				<hr>
+				<p>6) Με ποιο/ποια από τα παρακάτω θα σας ενδιέφερε να ασχοληθείτε?</p>
+				<input type="checkbox" id="q6a1" name="q6a1">
+				<label for="q6a1">Software testing</label><br>
+				<input type="checkbox" id="q6a2" name="q6a2">
+				<label for="q6a2">Black box testing</label><br>
+				<input type="checkbox" id="q6a3" name="q6a3">
+				<label for="q6a3">Random testing</label><br>
+				<input type="checkbox" id="q6a4" name="q6a4">
+				<label for="q6a4">Κανένα από τα παραπάνω</label>
+				<hr>
+				<p>7)Τι από τα παρακάτω θα θέλατε να δείτε στη σελίδα μας?</p>
+				<input type="checkbox" id="q7a1" name="q7a1">
+				<label for="q7a1">Video πάνω στους διάφορους τύπους testing</label><br>
+				<input type="checkbox" id="q7a2" name="q7a2">
+				<label for="q7a2">Συνεντεύξεις ειδικών πάνω στο software testing</label><br>
+				<input type="checkbox" id="q7a3" name="q7a3">
+				<label for="q7a3">Ασκήσεις για να τεστάρετε τις γνώσεις σας</label>
+				<hr>
+				<p>8)Πόσο ικανοποιημένος είστε από την σελίδα μας?</p>
+				<select>
+					<option>Καθόλου</option>
+					<option>Λίγο</option>
+					<option>Έτσι κι έτσι</option>
+					<option>Αρκετά</option>
+					<option>Απόλυτα</option>
+				</select>
+				<hr>
+				<p>9)Τι θα πιστεύατε πώς θα μπορούσαμε να βελτιώσουμε? Γράψτε μας στην παρακάτω φόρμα.</p>
+				<textarea id="additions" name="additions" rows="4" cols="100"> </textarea>
+				<hr>
+				<p>10)Πόσο ικανοποιημένος είστε από το ερωτηματολόγιο?</p>
+				<input type="radio" id="q10a1" name="radio_q10">
+				<label for="q10a1">Καθόλου</label><br>
+				<input type="radio" id="q10a2" name="radio_q10">
+				<label for="q10a2">Λίγο</label><br>
+				<input type="radio" id="q10a3" name="radio_q10">
+				<label for="q10a3">Αρκετά</label><br>
+				<input type="radio" id="q10a4" name="radio_q10">
+				<label for="q10a4">Πάρα πολύ</label><br>
+			</fieldset>
+			<p id="submit">Για να αποστείλετε την φόρμα πατήστε το διπλανό κουμπί.<input type="submit" onclick="return myFun()"></p>
+		</form>
+		<footer id="footer">
+			<p> Συγγραφέας: Σταθόπουλος Γεώργιος</p>
+			<p> Τηλέφωνο: 6938204728</p>
+			<p> Διεύθυνση: Ναβαρίνου 26, Θεσσαλονίκη</p>
+			<p> Email:gstatho99@gmail.com</p>
+		</footer>
+	</body>
+</html>
