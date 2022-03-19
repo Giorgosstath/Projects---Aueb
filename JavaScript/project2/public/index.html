@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title>Home page</title>
+    <meta charset="UTF-8">
+	<meta name="George Stathopoulos" content="Bookstore">
+	<link rel="stylesheet" href="static/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+	<script src="static/js/main.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<header> Αρχική σελίδα online βιβλιοπωλείου </header>
+	<img src="static/books.png" alt="Books" width="95%">
+    <h1>Αναζήτηση βιβλίων</h1>
+
+    <p> Καλωσήρθατε στο online βιβλιοπωλείο μας. Στη σελίδα αυτή σας δίνετε η δυνατότητα να αναζητήσετε βιβλία της επιλογής σας. Επίσης μπορείτε να βρείτε όλα τα έργα ενός συγκεκριμένου συγγραφέα. Το μόνο που έχετε να κάνετε είναι να πληκτρολογήσετε στο παρακάτω πλαίσιο την λέξη ή τις λέξεις που επιθυμείτε και θα εμφανιστούν όλα τα σχετικά αποτελέσματα.</p>
+	
+	<form>
+		<label for="search"> Αναζήτηση:</label>
+		<input type="text" id="search" name="search_book" placeholder="Search">
+		<input type="submit" id="submit_btn" value="Submit" onclick="return search_Func()">
+	</form>
+	<p id="find">
+
+	</p>
+	<footer id="footer">
+		<p> Συγγραφέας: Σταθόπουλος Γεώργιος</p>
+		<p> Τηλέφωνο: 6938204728</p>
+		<p> Διεύθυνση: Ναβαρίνου 26, Θεσσαλονίκη</p>
+		<p> Email:gstatho99@gmail.com</p>
+	</footer>
+
+</body>
+
+</html>

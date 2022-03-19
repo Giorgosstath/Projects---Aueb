@@ -1,0 +1,40 @@
+body{
+	background-color:#F5F5DC;
+}
+
+header {
+	font-size:3em;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	margin-bottom:2em;
+	margin-top:1em;
+}
+
+img {
+	border: 1pt solid red;
+	height:700px;
+	margin-left:2.5%;
+}
+
+h1{
+	text-align:center;
+	margin-top:1em;
+}
+
+#footer {
+	background-color:#FF7F50;
+	margin-top:10em;
+}
+
+#search{
+	border:1pt solid blue;
+	border-radius: 25px;
+}
+
+h2 {
+	color:red;
+}
+
+li {
+	font-size:1.2em;
+}

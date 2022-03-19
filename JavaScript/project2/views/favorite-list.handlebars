@@ -1,0 +1,9 @@
+<form>
+		<label for="list_search"> Αναζήτηση:</label>
+		<input type="text" id="list_search" onkeyup="myFunction()" placeholder="Search">
+</form>
+<ul>
+	{{#each favorite}}
+		<li> (ID:{{id}}), (TITLE:{{title}}), (AUTHOR:{{author}}), (DESCRIPTION:{{description}}) <a href="http://localhost:8080/modify?id={{id}}"> <input type="button" id={{id}} value="Modify content"> </a></li>
+	{{/each}}
+</ul>
